@@ -1,0 +1,16 @@
+
+<% if @hotels %>
+<% @hotels.each do |hotel| %>
+<center><h4><%=hotel.photo%></h4>
+<%end%>
+<%else%>
+Зробіть його через <a>Адмінку</a>
+<%end%>
+
+<div class="row">
+<% @rooms.each do |room| %>
+<div class="col-4">
+<center><%=room.pictures%></center>
+</div>
+<%end%>
+</div>

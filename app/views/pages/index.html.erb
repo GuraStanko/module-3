@@ -1,0 +1,16 @@
+<% if @hotels %>
+<% @hotels.each do |hotel| %>
+<center><h4><%=hotel.title%></h4>
+<p><i><%=hotel.body %></i></p></center>
+<%end%>
+<%else%>
+Зробіть його через <a>Адмінку</a>
+<%end%>
+
+<div class="row">
+<% @rooms.each do |room| %>
+<div class="col-4">
+<center><%=link_to room.title, admin_room_path(room.id)%></center>
+</div>
+<%end%>
+</div>
